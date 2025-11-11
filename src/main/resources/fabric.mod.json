@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "smartcmds",
+	"version": "${version}",
+	"name": "smartcmds",
+	"description": "Chat utility that simplifies chat commands and arguments.",
+	"authors": [
+		"jackzdev"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/smartcmds/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.jackzdev.smartcmds.Smartcmds"
+		],
+		"fabric-datagen": [
+			"com.jackzdev.smartcmds.SmartcmdsDataGenerator"
+		],
+        "client": [
+          "com.jackzdev.smartcmds.SmartcmdsModClient"
+        ]
+	},
+	"mixins": [
+		"smartcmds.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
